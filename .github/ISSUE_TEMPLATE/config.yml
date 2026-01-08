@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Question / Discussion
+    url: https://github.com/samithahansaka/formless/discussions
+    about: Ask questions and discuss ideas here
+  - name: Documentation
+    url: https://github.com/samithahansaka/formless#readme
+    about: Read the documentation before opening an issue
