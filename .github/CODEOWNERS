@@ -1,0 +1,25 @@
+# CODEOWNERS - Automatic PR review assignment
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owners for everything in the repo
+* @samithahansaka
+
+# Core packages - critical changes
+/packages/core/ @samithahansaka
+/packages/react/ @samithahansaka
+
+# Adapters
+/packages/react-hook-form/ @samithahansaka
+/packages/formik/ @samithahansaka
+/packages/tanstack-form/ @samithahansaka
+/packages/zod/ @samithahansaka
+
+# CI/CD and configuration
+/.github/ @samithahansaka
+/turbo.json @samithahansaka
+/tsconfig.base.json @samithahansaka
+
+# Documentation
+/README.md @samithahansaka
+/CONTRIBUTING.md @samithahansaka
+/SECURITY.md @samithahansaka

@@ -1,0 +1,52 @@
+{
+  "name": "@universal-form/formik",
+  "version": "0.1.0",
+  "description": "Formik adapter for Universal Form Adapter",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@universal-form/core": "*"
+  },
+  "peerDependencies": {
+    "formik": "^2.4.0",
+    "react": "^18.0.0"
+  },
+  "devDependencies": {
+    "formik": "^2.4.6",
+    "react": "^18.3.1",
+    "typescript": "^5.8.3",
+    "tsup": "^8.5.1",
+    "vitest": "^1.0.0"
+  },
+  "keywords": [
+    "formik",
+    "form",
+    "forms",
+    "universal-form-adapter",
+    "react"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/universal-form-adapter/universal-form-adapter.git",
+    "directory": "packages/formik"
+  }
+}
