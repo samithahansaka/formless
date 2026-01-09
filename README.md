@@ -97,7 +97,7 @@ function ContactForm() {
 
 | Package                                                                  | Description                           | Version                                                                                                                                                                   | Size                                                                                                                  |
 | ------------------------------------------------------------------------ | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| [`@samithahansaka/formless`](./packages/formless)                        | **All-in-one package (recommended)**  | [![npm](https://img.shields.io/npm/v/@samithahansaka/formless?style=flat-square)](https://www.npmjs.com/package/@samithahansaka/formless)                                 | ![size](https://img.shields.io/bundlephobia/minzip/@samithahansaka/formless?style=flat-square&label=)                 |
+| [`@samithahansaka/formless`](./packages/zzz-formless)                    | **All-in-one package (recommended)**  | [![npm](https://img.shields.io/npm/v/@samithahansaka/formless?style=flat-square)](https://www.npmjs.com/package/@samithahansaka/formless)                                 | ![size](https://img.shields.io/bundlephobia/minzip/@samithahansaka/formless?style=flat-square&label=)                 |
 | [`@samithahansaka/formless-core`](./packages/core)                       | Core types, utilities, and interfaces | [![npm](https://img.shields.io/npm/v/@samithahansaka/formless-core?style=flat-square)](https://www.npmjs.com/package/@samithahansaka/formless-core)                       | ![size](https://img.shields.io/bundlephobia/minzip/@samithahansaka/formless-core?style=flat-square&label=)            |
 | [`@samithahansaka/formless-react`](./packages/react)                     | React hooks and components            | [![npm](https://img.shields.io/npm/v/@samithahansaka/formless-react?style=flat-square)](https://www.npmjs.com/package/@samithahansaka/formless-react)                     | ![size](https://img.shields.io/bundlephobia/minzip/@samithahansaka/formless-react?style=flat-square&label=)           |
 | [`@samithahansaka/formless-react-hook-form`](./packages/react-hook-form) | React Hook Form adapter               | [![npm](https://img.shields.io/npm/v/@samithahansaka/formless-react-hook-form?style=flat-square)](https://www.npmjs.com/package/@samithahansaka/formless-react-hook-form) | ![size](https://img.shields.io/bundlephobia/minzip/@samithahansaka/formless-react-hook-form?style=flat-square&label=) |
@@ -259,13 +259,13 @@ npm run lint
 ```
 formless/
 ├── packages/
-│   ├── formless/          # All-in-one meta-package
 │   ├── core/              # Core types and utilities
 │   ├── react/             # React hooks and components
 │   ├── react-hook-form/   # React Hook Form adapter
 │   ├── formik/            # Formik adapter
 │   ├── tanstack-form/     # TanStack Form adapter
-│   └── zod/               # Zod schema bridge
+│   ├── zod/               # Zod schema bridge
+│   └── zzz-formless/      # All-in-one meta-package
 └── examples/
     └── basic/             # Example application
 ```
