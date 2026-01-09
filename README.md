@@ -1,10 +1,10 @@
 <p align="center">
   <a href="https://github.com/samithahansaka/formless/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/samithahansaka/formless/ci.yml?branch=master&style=flat-square&label=CI" alt="CI" /></a>
-  <a href="https://www.npmjs.com/package/@samithahansaka/formless-core"><img src="https://img.shields.io/npm/v/@samithahansaka/formless-core?style=flat-square&color=blue" alt="npm version" /></a>
-  <img src="https://img.shields.io/npm/dm/@samithahansaka/formless-core?style=flat-square&color=green" alt="downloads" />
-  <img src="https://img.shields.io/bundlephobia/minzip/@samithahansaka/formless-core?style=flat-square&color=orange" alt="bundle size" />
+  <a href="https://www.npmjs.com/package/@samithahansaka/formless"><img src="https://img.shields.io/npm/v/@samithahansaka/formless?style=flat-square&color=blue" alt="npm version" /></a>
+  <img src="https://img.shields.io/npm/dm/@samithahansaka/formless?style=flat-square&color=green" alt="downloads" />
+  <img src="https://img.shields.io/bundlephobia/minzip/@samithahansaka/formless?style=flat-square&color=orange" alt="bundle size" />
   <a href="https://codecov.io/gh/samithahansaka/formless"><img src="https://img.shields.io/codecov/c/github/samithahansaka/formless?style=flat-square" alt="coverage" /></a>
-  <a href="./LICENSE"><img src="https://img.shields.io/npm/l/@samithahansaka/formless-core?style=flat-square" alt="license" /></a>
+  <a href="./LICENSE"><img src="https://img.shields.io/npm/l/@samithahansaka/formless?style=flat-square" alt="license" /></a>
   <img src="https://img.shields.io/badge/TypeScript-5.0+-blue?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
 </p>
 
@@ -32,6 +32,18 @@
 
 ## Installation
 
+### Option 1: All-in-one package (recommended)
+
+```bash
+npm install @samithahansaka/formless
+
+# Plus your form library of choice
+npm install react-hook-form  # or formik, or @tanstack/react-form
+npm install zod              # for schema validation
+```
+
+### Option 2: Individual packages
+
 ```bash
 # Core packages
 npm install @samithahansaka/formless-core @samithahansaka/formless-react @samithahansaka/formless-zod
@@ -46,11 +58,14 @@ npm install @samithahansaka/formless-tanstack-form @tanstack/react-form
 
 ## Quick Start
 
-### 1. Define your schema
-
-```typescript
+```tsx
 import { z } from 'zod';
-import { zodBridge } from '@samithahansaka/formless-zod';
+import {
+  useUniversalForm,
+  Field,
+  rhfAdapter, // or formikAdapter, tanstackAdapter
+  zodBridge,
+} from '@samithahansaka/formless';
 
 const schema = zodBridge(
   z.object({
@@ -58,27 +73,11 @@ const schema = zodBridge(
     email: z.string().email('Invalid email'),
   })
 );
-```
-
-### 2. Choose your adapter
-
-```typescript
-import { rhfAdapter } from '@samithahansaka/formless-react-hook-form';
-// or: import { formikAdapter } from '@samithahansaka/formless-formik';
-// or: import { tanstackAdapter } from '@samithahansaka/formless-tanstack-form';
-
-const adapter = rhfAdapter();
-```
-
-### 3. Build your form
-
-```tsx
-import { useUniversalForm, Field } from '@samithahansaka/formless-react';
 
 function ContactForm() {
   const form = useUniversalForm({
     schema,
-    adapter,
+    adapter: rhfAdapter(),
     defaultValues: { name: '', email: '' },
   });
 
@@ -98,6 +97,7 @@ function ContactForm() {
 
 | Package                                                                  | Description                           | Version                                                                                                                                                                   | Size                                                                                                                  |
 | ------------------------------------------------------------------------ | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| [`@samithahansaka/formless`](./packages/formless)                        | **All-in-one package (recommended)**  | [![npm](https://img.shields.io/npm/v/@samithahansaka/formless?style=flat-square)](https://www.npmjs.com/package/@samithahansaka/formless)                                 | ![size](https://img.shields.io/bundlephobia/minzip/@samithahansaka/formless?style=flat-square&label=)                 |
 | [`@samithahansaka/formless-core`](./packages/core)                       | Core types, utilities, and interfaces | [![npm](https://img.shields.io/npm/v/@samithahansaka/formless-core?style=flat-square)](https://www.npmjs.com/package/@samithahansaka/formless-core)                       | ![size](https://img.shields.io/bundlephobia/minzip/@samithahansaka/formless-core?style=flat-square&label=)            |
 | [`@samithahansaka/formless-react`](./packages/react)                     | React hooks and components            | [![npm](https://img.shields.io/npm/v/@samithahansaka/formless-react?style=flat-square)](https://www.npmjs.com/package/@samithahansaka/formless-react)                     | ![size](https://img.shields.io/bundlephobia/minzip/@samithahansaka/formless-react?style=flat-square&label=)           |
 | [`@samithahansaka/formless-react-hook-form`](./packages/react-hook-form) | React Hook Form adapter               | [![npm](https://img.shields.io/npm/v/@samithahansaka/formless-react-hook-form?style=flat-square)](https://www.npmjs.com/package/@samithahansaka/formless-react-hook-form) | ![size](https://img.shields.io/bundlephobia/minzip/@samithahansaka/formless-react-hook-form?style=flat-square&label=) |
@@ -259,6 +259,7 @@ npm run lint
 ```
 formless/
 ├── packages/
+│   ├── formless/          # All-in-one meta-package
 │   ├── core/              # Core types and utilities
 │   ├── react/             # React hooks and components
 │   ├── react-hook-form/   # React Hook Form adapter

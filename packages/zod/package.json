@@ -4,11 +4,15 @@
   "description": "Zod schema bridge for Universal Form Adapter",
   "keywords": [
     "form",
+    "forms",
     "react",
     "typescript",
     "zod",
     "validation",
-    "schema"
+    "schema",
+    "formless",
+    "bridge",
+    "type-safe"
   ],
   "author": "",
   "license": "MIT",
@@ -49,8 +53,7 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@samithahansaka/formless-core": "*",
-    "@tanstack/react-form": "1.27.7"
+    "@samithahansaka/formless-core": "*"
   },
   "peerDependencies": {
     "zod": ">=3.0.0"

@@ -1,0 +1,20 @@
+import { defineConfig } from 'tsup';
+
+export default defineConfig({
+  entry: ['src/index.ts'],
+  format: ['cjs', 'esm'],
+  dts: true,
+  splitting: false,
+  sourcemap: true,
+  clean: true,
+  treeshake: true,
+  minify: false,
+  external: [
+    'react',
+    'react-hook-form',
+    'formik',
+    '@tanstack/react-form',
+    '@tanstack/form-core',
+    'zod',
+  ],
+});

@@ -4,10 +4,16 @@
   "description": "Core types and utilities for Universal Form Adapter",
   "keywords": [
     "form",
+    "forms",
     "react",
     "typescript",
     "adapter",
-    "universal"
+    "universal",
+    "formless",
+    "validation",
+    "schema",
+    "utilities",
+    "types"
   ],
   "author": "",
   "license": "MIT",
@@ -55,8 +61,5 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "dependencies": {
-    "@tanstack/react-form": "1.27.7"
   }
 }

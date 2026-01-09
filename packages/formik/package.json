@@ -23,8 +23,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@samithahansaka/formless-core": "*",
-    "@tanstack/react-form": "1.27.7"
+    "@samithahansaka/formless-core": "*"
   },
   "peerDependencies": {
     "formik": "^2.4.0",
@@ -42,7 +41,12 @@
     "form",
     "forms",
     "formless",
-    "react"
+    "react",
+    "typescript",
+    "adapter",
+    "universal",
+    "validation",
+    "useFormik"
   ],
   "license": "MIT",
   "repository": {

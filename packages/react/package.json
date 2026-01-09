@@ -4,11 +4,17 @@
   "description": "React bindings for Universal Form Adapter",
   "keywords": [
     "form",
+    "forms",
     "react",
     "typescript",
     "adapter",
     "universal",
-    "hooks"
+    "formless",
+    "hooks",
+    "components",
+    "useForm",
+    "useField",
+    "validation"
   ],
   "author": "",
   "license": "MIT",
@@ -49,8 +55,7 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@samithahansaka/formless-core": "*",
-    "@tanstack/react-form": "1.27.7"
+    "@samithahansaka/formless-core": "*"
   },
   "peerDependencies": {
     "react": ">=18.0.0"
