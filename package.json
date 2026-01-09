@@ -23,14 +23,10 @@
     "lint:fix": "eslint packages/*/src --ext .ts,.tsx --fix",
     "typecheck": "npm run typecheck --workspaces --if-present",
     "clean": "rm -rf packages/*/dist node_modules coverage",
-    "changeset": "changeset",
-    "version-packages": "changeset version",
-    "release": "npm run build && changeset publish",
+    "release": "npm publish --workspaces --access public",
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@changesets/changelog-github": "^0.5.0",
-    "@changesets/cli": "^2.27.1",
     "@commitlint/cli": "^18.4.3",
     "@commitlint/config-conventional": "^18.4.3",
     "@types/node": "^20.10.0",
