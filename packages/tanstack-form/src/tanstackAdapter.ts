@@ -57,7 +57,7 @@ interface SimplifiedFormApi<T extends Record<string, unknown>> {
     submissionAttempts: number;
   };
   store: {
-    subscribe: (callback: () => void) => () => void;
+    subscribe: (callback: () => void) => { unsubscribe: () => void };
   };
   mount: () => void;
   setFieldValue: (
@@ -555,7 +555,7 @@ export function tanstackAdapter(
 
       return () => {
         engine.subscribers.delete(wrappedCallback);
-        unsubForm();
+        unsubForm.unsubscribe();
       };
     },
 
@@ -574,7 +574,7 @@ export function tanstackAdapter(
 
       return () => {
         engine.subscribers.delete(wrappedCallback);
-        unsubForm();
+        unsubForm.unsubscribe();
       };
     },
 

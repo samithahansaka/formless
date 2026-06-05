@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import type { JSX, ReactNode } from 'react';
 import type { UniversalFormReturn } from '@samithahansaka/formless-core';
 import { useField, type UseFieldReturn } from '../useField';
 

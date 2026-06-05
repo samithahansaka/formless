@@ -1,4 +1,4 @@
-import type { FormHTMLAttributes, ReactNode } from 'react';
+import type { FormHTMLAttributes, JSX, ReactNode } from 'react';
 import type {
   UniversalFormReturn,
   FormErrors,

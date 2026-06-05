@@ -1,4 +1,4 @@
-import { createContext, useContext, type ReactNode } from 'react';
+import { createContext, useContext, type JSX, type ReactNode } from 'react';
 import type { UniversalFormReturn } from '@samithahansaka/formless-core';
 
 /**
