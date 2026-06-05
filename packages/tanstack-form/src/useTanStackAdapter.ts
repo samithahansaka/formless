@@ -210,7 +210,10 @@ export function useTanStackAdapter<T extends Record<string, unknown>>(
   // Use useSyncExternalStore to subscribe to TanStack form state changes
   const formState = useSyncExternalStore(
     useCallback(
-      (onStoreChange: () => void) => nativeForm.store.subscribe(onStoreChange),
+      (onStoreChange: () => void) => {
+        const sub = nativeForm.store.subscribe(onStoreChange);
+        return () => sub.unsubscribe();
+      },
       [nativeForm.store]
     ),
     () => nativeForm.state,
@@ -267,7 +270,7 @@ export function useTanStackAdapter<T extends Record<string, unknown>>(
         const unsubForm = nativeForm.store.subscribe(callback);
         return () => {
           subscribersRef.current.delete(callback);
-          unsubForm();
+          unsubForm.unsubscribe();
         };
       },
       _adapterState: adapterStateRef,
