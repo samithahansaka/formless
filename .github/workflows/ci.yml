@@ -24,7 +24,7 @@ jobs:
           node-version-file: '.nvmrc'
 
       - name: Install dependencies
-        run: rm -rf node_modules package-lock.json && npm install
+        run: npm ci
 
       - name: Run linter
         run: npm run lint
@@ -42,7 +42,7 @@ jobs:
           node-version-file: '.nvmrc'
 
       - name: Install dependencies
-        run: rm -rf node_modules package-lock.json && npm install
+        run: npm ci
 
       - name: Build packages
         run: npm run build
@@ -63,7 +63,7 @@ jobs:
           node-version-file: '.nvmrc'
 
       - name: Install dependencies
-        run: rm -rf node_modules package-lock.json && npm install
+        run: npm ci
 
       - name: Build packages
         run: npm run build
@@ -92,7 +92,7 @@ jobs:
           node-version-file: '.nvmrc'
 
       - name: Install dependencies
-        run: rm -rf node_modules package-lock.json && npm install
+        run: npm ci
 
       - name: Build all packages
         run: npm run build

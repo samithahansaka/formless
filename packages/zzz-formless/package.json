@@ -16,7 +16,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup",
+    "build": "tsup && tsc -p tsconfig.build.json && node ../../scripts/dts-to-cts.mjs",
     "dev": "tsup --watch",
     "typecheck": "tsc --noEmit"
   },
@@ -55,7 +55,7 @@
     "react": "^18.3.1",
     "react-hook-form": "^7.54.2",
     "tsup": "^8.5.1",
-    "typescript": "^6.0.2",
+    "typescript": "^5.9.3",
     "zod": "^3.24.4"
   },
   "keywords": [
