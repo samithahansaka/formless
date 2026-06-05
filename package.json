@@ -24,7 +24,7 @@
     "typecheck": "npm run typecheck --workspaces --if-present",
     "clean": "rm -rf packages/*/dist node_modules coverage",
     "release": "npm publish --workspaces --access public",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.5.0",
