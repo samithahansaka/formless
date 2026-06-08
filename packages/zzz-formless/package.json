@@ -53,7 +53,7 @@
     "@tanstack/react-form": "^1.33.0",
     "formik": "^2.4.6",
     "react": "^19.2.7",
-    "react-hook-form": "^7.77.0",
+    "react-hook-form": "^7.78.0",
     "tsup": "^8.5.1",
     "typescript": "^5.9.3",
     "zod": "^4.4.3"
