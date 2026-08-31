@@ -33,8 +33,8 @@
     "formik": "^2.4.6",
     "react": "^19.2.7",
     "tsup": "^8.5.1",
-    "typescript": "^5.9.3",
-    "vitest": "^4.1.1"
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.11"
   },
   "keywords": [
     "formik",
